@@ -18,7 +18,6 @@ spec:
           image: dockersamples/examplevotingapp_result
           ports:
             - containerPort: 80
-
   replicas: 1
   selector:
     matchLabels:
