@@ -18,7 +18,6 @@ spec:
           image: postgres:12.2
           ports:
             - containerPort: 5432
-
   replicas: 1
   selector:
     matchLabels:
