@@ -10,11 +10,12 @@ spec:
     spec:
       serviceAccountName: nginx-ingress-serviceaccount
       containers:
-        - name: nginx-ingress-controller
-          image: nginx/nginx-ingress:edge
+         - name: nginx-ingress-controller
+           image: nginx/nginx-ingress:edge
        args:
          - /nginx-ingress-controller
          - --configmap=$(POD_NAMESPACE)/nginx-configuration
+         - -default-server-tls-secret=$(POD_NAMESPACE)/default-server-secret
        env:
          - name: POD_NAME
            valueFrom:
