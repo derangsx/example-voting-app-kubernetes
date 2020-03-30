@@ -8,6 +8,7 @@ spec:
       labels:
         name: nginx-ingress
     spec:
+      serviceAccountName: nginx-ingress-serviceaccount
       containers:
         - name: nginx-ingress-controller
           image: nginx/nginx-ingress:edge
@@ -32,4 +33,3 @@ spec:
   selector:
     matchLabels:
       name: nginx-ingress
-
